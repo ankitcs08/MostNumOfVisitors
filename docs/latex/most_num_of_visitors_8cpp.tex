@@ -1,0 +1,132 @@
+\doxysection{src/most\+Num\+Of\+Visitors.cpp File Reference}
+\hypertarget{most_num_of_visitors_8cpp}{}\label{most_num_of_visitors_8cpp}\index{src/mostNumOfVisitors.cpp@{src/mostNumOfVisitors.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_time}{Time}}
+\begin{DoxyCompactList}\small\item\em Represents a time with hour and minute components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{most_num_of_visitors_8cpp_aa7d0949d284eb4b8557e3e02087d1dea}{get\+Time\+In\+Minute}} (\mbox{\hyperlink{class_time}{Time}} t)
+\begin{DoxyCompactList}\small\item\em returns an integer denoting the input time object in minutes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time}{Time}} \mbox{\hyperlink{most_num_of_visitors_8cpp_aa81863503d5a4a31f798f88bb30d8106}{get\+Time}} (int minutes)
+\begin{DoxyCompactList}\small\item\em returns a \doxylink{class_time}{Time} object against the input integer denoting the time in minutes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time}{Time}} \mbox{\hyperlink{most_num_of_visitors_8cpp_ae4714273dfc1b3f80dc9fdfaddcf6900}{parse\+Time}} (const string \&time\+Str)
+\begin{DoxyCompactList}\small\item\em returns a \doxylink{class_time}{Time} object against the input string provided in hh\+:mm format. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{most_num_of_visitors_8cpp_a06035d6df67efbd50b91c1be4de53d54}{format\+Time}} (const \mbox{\hyperlink{class_time}{Time}} \&t)
+\begin{DoxyCompactList}\small\item\em returns an string denoting the time formulated in hh\+:mm format against the input time object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{most_num_of_visitors_8cpp_af6f208e0f7dbfaf763c04d837d09628a}{find\+Max\+Period}} (const unordered\+\_\+map$<$ int, int $>$ \&visitor\+Times)
+\begin{DoxyCompactList}\small\item\em Finds the time period with the most number of visitors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{most_num_of_visitors_8cpp_a9f518be8dee0626ac1245ae65da59309}{count\+Visitors}} (string input\+File)
+\begin{DoxyCompactList}\small\item\em Finds the time period with the most number of visitors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{most_num_of_visitors_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em The entry point of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{most_num_of_visitors_8cpp_a9f518be8dee0626ac1245ae65da59309}\label{most_num_of_visitors_8cpp_a9f518be8dee0626ac1245ae65da59309} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!countVisitors@{countVisitors}}
+\index{countVisitors@{countVisitors}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{countVisitors()}{countVisitors()}}
+{\footnotesize\ttfamily int count\+Visitors (\begin{DoxyParamCaption}\item[{string}]{input\+File }\end{DoxyParamCaption})}
+
+
+
+Finds the time period with the most number of visitors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File,The} & path to the input file containing visitor data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, The exit status of the program i.\+e. -\/1 for file read errors and 0 for success. 
+\end{DoxyReturn}
+\Hypertarget{most_num_of_visitors_8cpp_af6f208e0f7dbfaf763c04d837d09628a}\label{most_num_of_visitors_8cpp_af6f208e0f7dbfaf763c04d837d09628a} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!findMaxPeriod@{findMaxPeriod}}
+\index{findMaxPeriod@{findMaxPeriod}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{findMaxPeriod()}{findMaxPeriod()}}
+{\footnotesize\ttfamily string find\+Max\+Period (\begin{DoxyParamCaption}\item[{const unordered\+\_\+map$<$ int, int $>$ \&}]{visitor\+Times }\end{DoxyParamCaption})}
+
+
+
+Finds the time period with the most number of visitors. 
+
+This function iterates through the visitor times stored in a map and determines the time period during which the maximum number of visitors were present.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor\+Times,The} & map containing the count of visitors at each time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string representing the start and end times of the time period along with the count of the most visitors. (hh\+:mm-\/hh\+:mm;count) 
+\end{DoxyReturn}
+\Hypertarget{most_num_of_visitors_8cpp_a06035d6df67efbd50b91c1be4de53d54}\label{most_num_of_visitors_8cpp_a06035d6df67efbd50b91c1be4de53d54} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!formatTime@{formatTime}}
+\index{formatTime@{formatTime}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{formatTime()}{formatTime()}}
+{\footnotesize\ttfamily string format\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+returns an string denoting the time formulated in hh\+:mm format against the input time object. 
+
+\Hypertarget{most_num_of_visitors_8cpp_aa81863503d5a4a31f798f88bb30d8106}\label{most_num_of_visitors_8cpp_aa81863503d5a4a31f798f88bb30d8106} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!getTime@{getTime}}
+\index{getTime@{getTime}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} get\+Time (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+
+
+returns a \doxylink{class_time}{Time} object against the input integer denoting the time in minutes. 
+
+\Hypertarget{most_num_of_visitors_8cpp_aa7d0949d284eb4b8557e3e02087d1dea}\label{most_num_of_visitors_8cpp_aa7d0949d284eb4b8557e3e02087d1dea} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!getTimeInMinute@{getTimeInMinute}}
+\index{getTimeInMinute@{getTimeInMinute}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{getTimeInMinute()}{getTimeInMinute()}}
+{\footnotesize\ttfamily int get\+Time\+In\+Minute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_time}{Time}}}]{t }\end{DoxyParamCaption})}
+
+
+
+returns an integer denoting the input time object in minutes. 
+
+\Hypertarget{most_num_of_visitors_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{most_num_of_visitors_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!main@{main}}
+\index{main@{main}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The entry point of the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments. \\
+\hline
+{\em argv} & The array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The exit status of the program. 
+\end{DoxyReturn}
+\Hypertarget{most_num_of_visitors_8cpp_ae4714273dfc1b3f80dc9fdfaddcf6900}\label{most_num_of_visitors_8cpp_ae4714273dfc1b3f80dc9fdfaddcf6900} 
+\index{mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}!parseTime@{parseTime}}
+\index{parseTime@{parseTime}!mostNumOfVisitors.cpp@{mostNumOfVisitors.cpp}}
+\doxysubsubsection{\texorpdfstring{parseTime()}{parseTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} parse\+Time (\begin{DoxyParamCaption}\item[{const string \&}]{time\+Str }\end{DoxyParamCaption})}
+
+
+
+returns a \doxylink{class_time}{Time} object against the input string provided in hh\+:mm format. 
+

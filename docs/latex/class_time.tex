@@ -1,0 +1,165 @@
+\doxysection{Time Class Reference}
+\hypertarget{class_time}{}\label{class_time}\index{Time@{Time}}
+
+
+Represents a time with hour and minute components.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time_ad41532fa9dca778133707905c27eddc9}{Time}} (int h, int m)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_time}{Time} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_a6641072fd269c2d810b98956f80dacd3}{operator==}} (const \mbox{\hyperlink{class_time}{Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded equality operator to compare two \doxylink{class_time}{Time} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_a4838503f3fd5f3e0247f5776977e39a7}{operator$>$}} (const \mbox{\hyperlink{class_time}{Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded greater than operator to compare two \doxylink{class_time}{Time} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_a59a0b94a48a14950cca38b29c78c5ebd}{operator$<$}} (const \mbox{\hyperlink{class_time}{Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded less than operator to compare two \doxylink{class_time}{Time} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_a5ba0751f4e73911d5c9e7cb03e79cde9}{operator$>$=}} (const \mbox{\hyperlink{class_time}{Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded greater or equal operator to compare two \doxylink{class_time}{Time} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_a429e31172b1abb3978c520abb1294b89}{operator$<$=}} (const \mbox{\hyperlink{class_time}{Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded less or equal operator to compare two \doxylink{class_time}{Time} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_time_a497d35aa44ea40706dbab08f7a31d069}{hour}}
+\item 
+int \mbox{\hyperlink{class_time_a6c2e13147da34803a9784aa2b8bf8da8}{minute}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a time with hour and minute components. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_time_ad41532fa9dca778133707905c27eddc9}\label{class_time_ad41532fa9dca778133707905c27eddc9} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}\item[{int}]{h,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_time}{Time} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The hour component. \\
+\hline
+{\em m} & The minute component. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_time_a59a0b94a48a14950cca38b29c78c5ebd}\label{class_time_a59a0b94a48a14950cca38b29c78c5ebd} 
+\index{Time@{Time}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Time\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded less than operator to compare two \doxylink{class_time}{Time} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_time}{Time} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first \doxylink{class_time}{Time} object is less than the second time object, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_time_a429e31172b1abb3978c520abb1294b89}\label{class_time_a429e31172b1abb3978c520abb1294b89} 
+\index{Time@{Time}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Time\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded less or equal operator to compare two \doxylink{class_time}{Time} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_time}{Time} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first \doxylink{class_time}{Time} object is less or equal to the second time object, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_time_a6641072fd269c2d810b98956f80dacd3}\label{class_time_a6641072fd269c2d810b98956f80dacd3} 
+\index{Time@{Time}!operator==@{operator==}}
+\index{operator==@{operator==}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Time\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded equality operator to compare two \doxylink{class_time}{Time} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_time}{Time} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two \doxylink{class_time}{Time} objects are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_time_a4838503f3fd5f3e0247f5776977e39a7}\label{class_time_a4838503f3fd5f3e0247f5776977e39a7} 
+\index{Time@{Time}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Time\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded greater than operator to compare two \doxylink{class_time}{Time} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_time}{Time} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first \doxylink{class_time}{Time} object is greater than the second time object, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_time_a5ba0751f4e73911d5c9e7cb03e79cde9}\label{class_time_a5ba0751f4e73911d5c9e7cb03e79cde9} 
+\index{Time@{Time}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Time\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded greater or equal operator to compare two \doxylink{class_time}{Time} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_time}{Time} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first \doxylink{class_time}{Time} object is greater or equal to the second time object, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_time_a497d35aa44ea40706dbab08f7a31d069}\label{class_time_a497d35aa44ea40706dbab08f7a31d069} 
+\index{Time@{Time}!hour@{hour}}
+\index{hour@{hour}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int Time\+::hour}
+
+Hour component of the time \Hypertarget{class_time_a6c2e13147da34803a9784aa2b8bf8da8}\label{class_time_a6c2e13147da34803a9784aa2b8bf8da8} 
+\index{Time@{Time}!minute@{minute}}
+\index{minute@{minute}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily int Time\+::minute}
+
+Minute component of the time 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{most_num_of_visitors_8cpp}{most\+Num\+Of\+Visitors.\+cpp}}\end{DoxyCompactItemize}
