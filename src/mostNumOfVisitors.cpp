@@ -160,8 +160,9 @@ string findMaxPeriod(const unordered_map<int, int>& visitorTimes) {
  * @brief Finds the time period with the most number of visitors.
  * 
  * @param inputFile, The path to the input file containing visitor data.
+ * @return int, The exit status of the program i.e. -1 for file read errors and 0 for success.
  */
-void countVisitors( string inputFile) 
+int countVisitors( string inputFile) 
 {
     unordered_map<int, int> visitorTimes;
     ifstream file(inputFile);
@@ -194,6 +195,7 @@ void countVisitors( string inputFile)
 	}
     string maxPeriod = findMaxPeriod(visitorTimes);
     cout << maxPeriod;
+	return 0;
 }
 
 /**
@@ -207,12 +209,10 @@ int main(int argc, char* argv[]) {
 	
     if (argc != 2) {
         cout << "Usage: " << argv[0] << " input_file_absolute_path" << endl;
-        return 1; // returning error
+        return -1; // returning input parse error
     }
 
     string inputFile = argv[1];
 
-    countVisitors(inputFile);
-
-    return 0; // returning success
+    return countVisitors(inputFile);
 }
